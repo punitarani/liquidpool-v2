@@ -1026,28 +1026,25 @@ const ExistingPools = ({ connectedAddress }) => {
                   href={`https://opensea.io/${pool.poolAddress}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-500 hover:text-blue-500"
+                  className="mx-1 text-orange-500 hover:text-blue-500"
                 >
-                  {" "}
-                  Opensea{" "}
+                  OpenSea
                 </a>
                 <a
                   href={`https://info.uniswap.org/#/tokens/${pool.poolAddress}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mx-1 text-gray-500 hover:text-blue-500"
+                  className="mx-1 text-orange-500 hover:text-blue-500"
                 >
-                  {" "}
-                  Uniswap{" "}
+                  Uniswap
                 </a>
                 <a
                   href={`https://etherscan.io/address/${pool.poolAddress}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-500 hover:text-blue-500"
+                  className="mx-2 text-orange-500 hover:text-blue-500"
                 >
-                  {" "}
-                  Etherscan{" "}
+                  Etherscan
                 </a>
               </div>
             </div>
