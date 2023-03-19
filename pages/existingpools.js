@@ -476,7 +476,7 @@ const ExistingPools = ({ connectedAddress }) => {
       console.log(err);
       if (err.message === "Internal JSON-RPC error.") {
         alert(
-          "Metamask Error: Please make sure you enter the correct NFT id (check nft id available in your wallet) and try again"
+          "Metamask Error: Please make sure you enter the correct NFT ID (Check NFT ID in your wallet) and try again"
         );
       }
     }
@@ -1146,7 +1146,7 @@ const ExistingPools = ({ connectedAddress }) => {
         </div>
       ) : (
         <p className="text-center text-2xl m-10">
-          Connect wallet to get existing nft pools
+          Connect wallet to get existing NFT Pools
         </p>
       )}
     </div>

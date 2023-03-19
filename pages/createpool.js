@@ -49,7 +49,7 @@ const CreatePool = ({ connectedAddress }) => {
         </div>
       ) : (
         <p className="text-center text-2xl m-10">
-          Connect wallet to create nft pools
+          Connect wallet to create NFT Pool
         </p>
       )}
     </div>
