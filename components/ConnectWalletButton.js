@@ -49,15 +49,22 @@ export default function ConnectWalletButton({ connectedAddress, setAddress }) {
   }, []);
 
   return (
-    <div className="border-2 border-black p-1">
+    <div className="p-1 rounded-lg bg-blue-600 min-w-1/4">
       {connectedAddress ? (
-        <div>
-          {connectedAddress.substring(0, 4) +
+        <div className="text-white px-4">
+          {connectedAddress.substring(0, 5) +
             "..." +
             connectedAddress.substring(38)}
         </div>
       ) : (
-        <button onClick={connectWallet}>Connect Wallet</button>
+        <div onClick={connectWallet} className="p-0.5 cursor-pointer">
+          <img
+            src="/metamask.svg"
+            className="w-5 h-5 inline mx-1"
+            alt="MetaMask"
+          />
+          <button className="text-white mx-2">Connect Wallet</button>
+        </div>
       )}
     </div>
   );
