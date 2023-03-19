@@ -1,6 +1,9 @@
 import React from "react";
-import { ethers } from "ethers";
+import {ethers} from "ethers";
 import poolContract from "./poolcontract.json";
+
+const { ChainId, Fetcher, WETH, Route, Trade, TokenAmount, TradeType } = require ('@uniswap/sdk');
+
 
 const Liquefy = ({ connectedAddress }) => {
   const handleLiquefy = async ({
@@ -61,6 +64,18 @@ const Liquefy = ({ connectedAddress }) => {
         return;
       }
     }
+
+    // Trade on Uniswap
+    const customHttpProvider = new ethers.providers.JsonRpcProvider(process.env.INFURA_URL);
+
+    const chainId = ChainId.MAINNET;
+    const tokenAddress = pool.poolAddress;
+
+    const dai = await Fetcher.fetchTokenData(chainId, tokenAddress, customHttpProvider);
+    const weth = WETH[chainId];
+    const pair = await Fetcher.fetchPairData(dai, weth, customHttpProvider);
+    const route = new Route([pair], weth);
+    const trade = new Trade(route, new TokenAmount(weth, '100000000000000000'), TradeType.EXACT_INPUT);
   };
 
   return (
