@@ -5,8 +5,8 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'res.cloudinary.com',
+        protocol: "https",
+        hostname: "res.cloudinary.com",
         // You can add these as well
         // port: '',
         // pathname: 'arifscloud/image/upload/**',
@@ -14,6 +14,6 @@ const nextConfig = {
     ],
   },
   unoptimized: true,
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
