@@ -342,24 +342,49 @@ const Liquefy = ({ connectedAddress }) => {
     );
   };
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    const nftID = e.target.elements.nftID.value;
+    const pool = e.target.elements.pool.value;
+    const poolsDetail = e.target.elements.poolsDetail.value;
+    const percent = e.target.elements.percent.value;
+    const amount = e.target.elements.amount.value;
+    
+    { nftID, pool, poolsDetail, percent, amount }
+  }
+
   return (
     <div className="py-5">
       {connectedAddress ? (
         <div className="mx-auto w-90/100 bg-white shadow-lg rounded-lg p-4 ">
           <div className="flex flex-col">
-            <div className="flex flex-row">
-              <label>NFT Collection Address: </label>
-              <input placeholder="Enter NFT Collection Address"></input>
-            </div>
-            <div className="flex flex-row">
-              <label>NFT ID: </label>
-              <input placeholder="Enter NFT Collection Address"></input>
-            </div>
-            <div className="flex flex-row">
-              <input placeholder="Tokens"></input>
-              <input placeholder="Enter Amount"></input>
-              <button>Liquefy</button>
-            </div>
+            <form onSubmit={handleSubmit}>
+              <div className="flex flex-row">
+                <label>NFT Collection Address: </label>
+                <input
+                  key="nft-collection-address"
+                  name="nft-collection-address"
+                  placeholder="Enter NFT Collection Address"
+                ></input>
+              </div>
+              <div className="flex flex-row">
+                <label>NFT ID: </label>
+                <input
+                  key="nft-id"
+                  name="nft-id"
+                  placeholder="Enter NFT ID"
+                ></input>
+              </div>
+              <div className="flex flex-row">
+                <input key="tokens" name="tokens" placeholder="Tokens"></input>
+                <input
+                  key="amount"
+                  name="amount"
+                  placeholder="Enter Amount"
+                ></input>
+                <button type="submit">Liquify</button>
+              </div>
+            </form>
           </div>
         </div>
       ) : (
