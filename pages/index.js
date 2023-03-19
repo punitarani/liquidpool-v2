@@ -6,17 +6,17 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>PoolMyNFT</title>
+        <title>LiquidPool</title>
         <meta name="description" content="Pool NFT with ease" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <div className="flex flex-col items-center">
-          <h1 className="text-4xl text-center m-5">Welcome to PoolMyNFT</h1>
+          <h1 className="text-4xl text-center m-5">Welcome to LiquidPool</h1>
           <div className="">
             <p className={paragraphStyle}>
-              In PoolMyNFT, users deposit their NFTs (ERC-721) into
+              In LiquidPool, users deposit their NFTs (ERC-721) into
               collection-specific Pools and receive a standard ERC-20 token for
               each NFT deposited.
             </p>
@@ -68,21 +68,9 @@ export default function Home() {
 
       <footer className="text-center">
         <p>
-          {" "}
-          Made with ❤️ by{" "}
-          <a
-            href="https://twitter.com/bijoydoteth"
-            target="_blank"
-            className="text-blue-500 hover:underline"
-          >
-            bijoy
-          </a>{" "}
-          for the community
-        </p>
-        <p>
           This website is open-sourced.{" "}
           <a
-            href="https://github.com/ho4848/poolmynft"
+            href="https://github.com/punitarani/liquidpool-v2"
             target="_blank"
             className="text-blue-500 hover:underline"
           >

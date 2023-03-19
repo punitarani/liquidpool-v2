@@ -1,4 +1,4 @@
-In PoolMyNFT, users deposit their NFTs (ERC-721) into collection-specific Pools and receive a standard ERC-20 token for each NFT deposited.
+In LiquidPool, users deposit their NFTs (ERC-721) into collection-specific Pools and receive a standard ERC-20 token for each NFT deposited.
 
 This enables users to utilize their Pool Tokens in various Ethereum-based decentralized finance applications.
 

@@ -7,7 +7,7 @@ export default function Navbar({ connectedAddress, setAddress }) {
     <div className="flex justify-between h-12 bg-white text-gray-800 w-full p-2">
       <div className="flex items-center">
         <Link href="/" className="font-bold text-xl mx-2">
-          PoolMyNFT
+          LiquidPool
         </Link>
         <Link href="/">
           <div className="ml-4">Home</div>
