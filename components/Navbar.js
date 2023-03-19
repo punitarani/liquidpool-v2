@@ -12,6 +12,9 @@ export default function Navbar({ connectedAddress, setAddress }) {
         <Link href="/">
           <div className="ml-4">Home</div>
         </Link>
+        <Link href="/liquefy">
+          <div className="ml-4">Liquefy</div>
+        </Link>
         <Link href="/existingpools">
           <div className="ml-4">Existing Pools</div>
         </Link>
