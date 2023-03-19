@@ -59,7 +59,7 @@ const ExistingPools = ({ connectedAddress }) => {
   const swapInInputText = useRef(null);
   const swapOutInputText = useRef(null);
   const buttonStyle =
-    "right-0 top-0 h-full px-4 py-2 text-white bg-gray-600 rounded-md hover:bg-black focus:outline-none";
+    "right-0 top-0 h-full px-4 py-2 text-white bg-orange-600 rounded-md hover:bg-black focus:outline-none";
   const hoverEffect =
     "hover:transform hover:-translate-y-2 transition duration-300 hover:opacity-80 hover:cursor-pointer";
 
@@ -1089,7 +1089,7 @@ const ExistingPools = ({ connectedAddress }) => {
               <div className="text-center m-4">
                 <button
                   onClick={() => handleSelectPool(pool, { id: pool.uuid })}
-                  className="right-0 top-0 w-full h-full px-4 py-2 text-white bg-gray-600 rounded-md hover:bg-black focus:outline-none"
+                  className="right-0 top-0 w-full h-full px-4 py-2 text-white bg-orange-600 rounded-md hover:bg-black focus:outline-none"
                 >
                   {" "}
                   Select Pool (Pool Balance: {pool.holdingsLength})
@@ -1113,7 +1113,7 @@ const ExistingPools = ({ connectedAddress }) => {
             ) : (
               <button
                 onClick={handleGetExistingPools}
-                className="right-0 top-0 h-full px-4 py-2 text-white bg-gray-600 rounded-md hover:bg-black focus:outline-none"
+                className="right-0 top-0 h-full px-4 py-2 text-white bg-orange-600 rounded-md hover:bg-black focus:outline-none"
               >
                 {poolsDetail?.length > 0
                   ? `Total pools: ${poolsDetail?.length} (Click to reload)`

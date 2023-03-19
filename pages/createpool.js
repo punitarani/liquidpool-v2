@@ -37,7 +37,7 @@ const CreatePool = ({ connectedAddress }) => {
               ref={collectionAddress}
             />
             <button
-              className="absolute right-0 top-0 h-full px-4 py-2 text-white bg-gray-600 rounded-md hover:bg-black focus:outline-none"
+              className="absolute right-0 top-0 h-full px-4 py-2 text-white bg-orange-600 rounded-md hover:bg-black focus:outline-none"
               onClick={createPoolButton}
             >
               Create

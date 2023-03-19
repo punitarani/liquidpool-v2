@@ -49,14 +49,14 @@ export default function Home() {
 
           <div className="flex items-center m-5">
             <Link
-              className="mx-2 right-0 top-0 px-4 py-2 text-white bg-gray-600 rounded-md hover:bg-black focus:outline-none"
+              className="mx-2 right-0 top-0 px-4 py-2 text-white bg-orange-600 rounded-md hover:bg-black focus:outline-none"
               href="/existingpools"
             >
               {" "}
               Swap NFT Now
             </Link>
             <Link
-              className="mx-2 right-0 top-0 px-4 py-2 text-white bg-gray-600 rounded-md hover:bg-black focus:outline-none"
+              className="mx-2 right-0 top-0 px-4 py-2 text-white bg-orange-600 rounded-md hover:bg-black focus:outline-none"
               href="/contracts"
             >
               {" "}
