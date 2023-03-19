@@ -1,0 +1,54 @@
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.nav {
+    background-color: rgb(100%, 50%, 0%);
+    height: 3.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+.logo {
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.navMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navMenu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    width: 100%;
+}
+
+.navMenu a:hover {
+    color: rgb(100%, 50%, 0%);
+    background-color: white;
+    border-radius: 0.25rem;
+}
+
+.connectedWalletButton {
+    background-color: rgb(100%, 50%, 0%);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
