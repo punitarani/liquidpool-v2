@@ -344,13 +344,17 @@ const Liquefy = ({ connectedAddress }) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const nftID = e.target.elements.nftID.value;
-    const pool = e.target.elements.pool.value;
-    const poolsDetail = e.target.elements.poolsDetail.value;
-    const percent = e.target.elements.percent.value;
-    const amount = e.target.elements.amount.value;
-    
-    { nftID, pool, poolsDetail, percent, amount }
+    const nftCollectionAddress = e.target["nft-collection-address"].value;
+    const nftID = e.target["nft-id"].value;
+    const tokens = e.target["tokens"].value;
+    const amount = e.target["amount"].value;
+    const obj = {
+      nftCollectionAddress: nftCollectionAddress,
+      nftID: nftID,
+      tokens: tokens,
+      amount: amount,
+    };
+    console.log(obj);
   }
 
   return (
@@ -362,7 +366,7 @@ const Liquefy = ({ connectedAddress }) => {
               <div className="flex flex-row">
                 <label>NFT Collection Address: </label>
                 <input
-                  key="nft-collection-address"
+                  id="nft-collection-address"
                   name="nft-collection-address"
                   placeholder="Enter NFT Collection Address"
                 ></input>
@@ -370,7 +374,7 @@ const Liquefy = ({ connectedAddress }) => {
               <div className="flex flex-row">
                 <label>NFT ID: </label>
                 <input
-                  key="nft-id"
+                  id="nft-id"
                   name="nft-id"
                   placeholder="Enter NFT ID"
                 ></input>
@@ -378,7 +382,7 @@ const Liquefy = ({ connectedAddress }) => {
               <div className="flex flex-row">
                 <input key="tokens" name="tokens" placeholder="Tokens"></input>
                 <input
-                  key="amount"
+                  id="amount"
                   name="amount"
                   placeholder="Enter Amount"
                 ></input>
