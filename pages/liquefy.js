@@ -1,6 +1,68 @@
 import React from "react";
+import { ethers } from "ethers";
+import poolContract from "./poolcontract.json";
 
-export default function Liquefy({ connectedAddress }) {
+const Liquefy = ({ connectedAddress }) => {
+  const handleLiquefy = async ({
+    nftID,
+    pool,
+    poolsDetail,
+    percent,
+    amount,
+  }) => {
+    let nftCollectionContract;
+    let nftPoolContract;
+
+    // Build NFT collection contract instance
+    try {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner();
+
+      nftCollectionContract = new ethers.Contract(
+        pool.collectionAddress,
+        poolContract.erc721.abi,
+        signer
+      );
+
+      nftPoolContract = new ethers.Contract(
+        pool.poolAddress,
+        poolContract.poolContract.abi,
+        signer
+      );
+    } catch (error) {
+      console.log(error);
+      alert("Error approving NFT collection to transfer NFTs");
+      return;
+    }
+
+    // Approve Deposit
+    try {
+      // Approve pool contract to transfer NFTs
+      const tx = await nftCollectionContract.setApprovalForAll(
+        pool.poolAddress,
+        true
+      );
+      const receipt = await tx.wait();
+    } catch (error) {
+      console.log(error);
+      alert("Error approving NFT collection to deposit NFTs");
+      return;
+    }
+
+    // Deposit
+    try {
+      const tx = await nftPoolContract.deposit(nftID);
+      const receipt = await tx.wait();
+      // alert("NFT deposited, refresh wallet to see the changes");
+    } catch (err) {
+      console.log(err);
+      if (err.message === "Internal JSON-RPC error.") {
+        alert("Metamask Error: please try again");
+        return;
+      }
+    }
+  };
+
   return (
     <div className="py-5">
       {connectedAddress ? (
@@ -16,4 +78,6 @@ export default function Liquefy({ connectedAddress }) {
       )}
     </div>
   );
-}
+};
+
+export default Liquefy;
