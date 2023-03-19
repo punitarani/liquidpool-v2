@@ -1,5 +1,6 @@
 import { ethers } from "ethers";
 import { useEffect } from "react";
+import Image from "next/image";
 
 export default function ConnectWalletButton({ connectedAddress, setAddress }) {
   const connectWallet = async () => {
@@ -57,13 +58,20 @@ export default function ConnectWalletButton({ connectedAddress, setAddress }) {
             connectedAddress.substring(38)}
         </div>
       ) : (
-        <div onClick={connectWallet} className="flex flex-row items-center px-2 h-8 cursor-pointer">
-          <img
+        <div
+          onClick={connectWallet}
+          className="flex flex-row items-center px-2 h-8 cursor-pointer"
+        >
+          <Image
             src="/metamask.svg"
+            height={20}
+            width={20}
             className="w-5 h-5 mx-1"
             alt="MetaMask"
           />
-          <button className="text-white text-sm font-semibold mx-2">Connect Wallet</button>
+          <button className="text-white text-sm font-semibold mx-2">
+            Connect Wallet
+          </button>
         </div>
       )}
     </div>
